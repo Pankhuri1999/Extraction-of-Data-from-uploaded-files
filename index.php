@@ -29,7 +29,7 @@
 					if(in_array($ext, $extension)) {
 						$memoryOfFile = $_FILES['uploadFile']['size'] / 1024;
 						if($memoryOfFile < 50) {
-							$file = "uploads/".$_FILES['uploadFile']['name'];
+							$file = "FileUploads/".$_FILES['uploadFile']['name'];
 							$uploadTrue = copy($_FILES['uploadFile']['tmp_name'], $file);
 							if($uploadTrue) {
 								include("db.php");
